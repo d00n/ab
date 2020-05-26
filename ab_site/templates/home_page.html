@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+	<section class="hero">
+	  <div class="hero-body">
+	    <div class="container">
+	      <img src="{% static "img/parigo_logo_large.png" %}" alt="Parigo">
+	    </div>
+	  </div>
+	</section>
+
+	<section class="section">
+	<div class="container has-text-centered is-size-3">
+	    A friendly neighborhood spot with the best patio in the Marina
+	</div>
+	<div class="container has-text-centered is-size-5">
+	    Well, no patio for now :(
+	    <br>
+	    ..but we've got everything to-go!
+	</div>
+	<hr size="30">
+	<div class="container has-text-centered is-size-3">
+		Memorial Day specials for 2
+	</div>
+	<div class="container has-text-centered is-size-5">
+		<ul>
+			<li>Picnic basket pick up starts at noon</li>
+			<li>BBQ kit pick up starts at 11am</li>
+		</ul>
+	<br>
+	<div class="container has-text-centered is-size-4">
+		Picnic basket | 28
+	</div>
+	<div class="container has-text-centered is-size-5">
+		<ul>
+			<li>Chicken tenders, fries, slaw</li>
+		</ul>
+	</div>		
+	<br>
+	<div class="container has-text-centered is-size-4">
+		Fire-up your BBQ kit | 22
+	</div>	
+	<div class="container has-text-centered is-size-5">
+		<ul>
+			<li>1/2# Kobe boneless short rib, slaw</li>
+		</ul>
+	</div>	
+	<br>
+	<div class="container has-text-centered is-size-4">
+		Libations
+	</div>	
+	<div class="container has-text-centered is-size-5">
+		<ul>
+			<li>6-pack of IPA/Kolsch/KSA | 15</li>
+			<li>4x margaritas | 20</li>
+			<li>Lots of wine deals!</li>
+		</ul>
+	</div>
+	</section>
+
+{% endblock %}
