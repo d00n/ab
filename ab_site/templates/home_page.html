@@ -1,6 +1,4 @@
 {% extends "base.html" %}
-{% load static %}
-
 
 {% block content %}
 
@@ -17,30 +15,70 @@
 	    A friendly neighborhood spot with the best patio in the Marina
 	</div>
 
+	<br>
+
 	<div class="container has-text-centered is-size-5">
         <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=986023&type=standard&theme=standard&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website'></script>
     </div>
 
-    <figure class="image">
-  		<img src="{% static "/img/6.jpg" %}">
-	</figure>
 	<br>
-    <figure class="image">
-  		<img src="{% static "/img/8.jpg" %}">
-	</figure>
-	<br>
-    <figure class="image">
-  		<img src="{% static "/img/10.jpg" %}">
-	</figure>
-	<br>
-    <figure class="image">
-  		<img src="{% static "/img/11.jpg" %}">
-	</figure>
-	<br>
-    <figure class="image">
-  		<img src="{% static "/img/7.jpg" %}">
-	</figure>
 
+    <div class="swiper-container">
+	  <div class="swiper-wrapper">
+	      <div class="swiper-slide">
+	        <img src="{% static "/img/6.jpg" %}">
+	      </div>
+	      
+	      <div class="swiper-slide">
+	        <img src="{% static "/img/8.jpg" %}">
+	      </div>
+	      
+	      <div class="swiper-slide">
+	        <img src="{% static "/img/10.jpg" %}">
+	      </div>
+	      
+	      <div class="swiper-slide">
+	        <img src="{% static "/img/11.jpg" %}">
+	      </div>
+	      
+	      <div class="swiper-slide">
+	        <img src="{% static "/img/7.jpg" %}">
+	      </div>
+	      
+	  </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+	</div>
+
+	<!-- Initialize Swiper -->
+	<script>
+	var mySwiper = new Swiper('.swiper-container', {
+	  // Optional parameters
+	  direction: 'horizontal',
+	  loop: true,
+
+	  // If we need pagination
+	  pagination: {
+	    el: '.swiper-pagination',
+	  },
+
+	  // Navigation arrows
+	  navigation: {
+	    nextEl: '.swiper-button-next',
+	    prevEl: '.swiper-button-prev',
+	  },
+
+	  autoHeight:true,
+
+	})
+	</script>	
 	
 	<hr size="30">
 
