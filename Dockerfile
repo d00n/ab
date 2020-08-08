@@ -13,5 +13,8 @@ COPY . /code/
 WORKDIR /code
 RUN pip install --no-cache-dir -r requirements.txt 
 
+# Django dev
 # CMD [ "python", "/code/manage.py", 'runserver', '0.0.0.0:8000:8000']
+
+# Gunicorn/Nginx stage/prod
 CMD ["gunicorn", "-b", "0.0.0.0:8000", "ab.wsgi"]
